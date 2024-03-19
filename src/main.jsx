@@ -4,21 +4,35 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import AboutAbout from './assets/Component/About/AboutAbout';
+import Contract from './assets/Component/Contract/Contract';
+import Header from './assets/Component/Header/Header';
+import Home from './assets/Component/Home/Home';
 import './index.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <div>Hello world!</div>,
+    path: "",
+    element: <Home></Home>,
+    children: [
+      {
+        path: "/header",
+        element:<Header></Header>,
+      },
+      {
+        path: '/contract',
+        element:<Contract></Contract>,
+      },
+      {
+        path:'/About',
+        element:<AboutAbout></AboutAbout>
+      }
+      
+
+
+    ],
   },
-  {
-    path: '/about',
-    element:<div>we are in a about page </div>,
-  },
-  {
-    path: 'home',
-    element:<div>we are in a home page </div>,
-  }
+  
 ]);
 
 
