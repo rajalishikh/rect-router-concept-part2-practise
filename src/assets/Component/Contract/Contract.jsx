@@ -3,7 +3,7 @@
 const Contract = () => {
     return (
         <div>
-            <p>we are 10 km  far from the contract  </p>
+            <p>we are 1 call far from    the contract  </p>
             
         </div>
     );
