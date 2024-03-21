@@ -9,6 +9,7 @@ import Contract from './assets/Component/Contract/Contract';
 import Header from './assets/Component/Header/Header';
 import Home from './assets/Component/Home/Home';
 import Post from './assets/Component/Post/Post';
+import PostUnique from './assets/Component/PostUnique/PostUnique';
 import User from './assets/Component/User/User';
 import UserDetails from './assets/Component/UserDetails/UserDetails';
 import './index.css';
@@ -45,6 +46,13 @@ const router = createBrowserRouter([
         path: '/post',
         loader:()=> fetch('https://jsonplaceholder.typicode.com/posts'),
         element: <Post></Post>
+        
+      },
+      {
+        path: '/PostUnique/:PostID',
+        
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.PostID}`),
+        element:<PostUnique></PostUnique>
         
       }
       
