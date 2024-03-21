@@ -11,6 +11,7 @@ const Header = () => {
                 <Link className="tag" to={'/contract'}>Contract</Link>
                 <Link className="tag" to={'/About'}>About</Link>
                 <Link className="tag" to={'/User'}>User</Link>
+                <Link className="tag" to={'/post'}>Post</Link>
                 
                 
             </div>
