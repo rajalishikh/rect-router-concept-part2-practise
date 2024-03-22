@@ -4,6 +4,7 @@ import '../User/user.css';
 const PostDetails = ({ PostN}) => {
    
     const { title, body, id } = PostN;
+    
     // navigate is the hok jeta amader button shora shori onno kothi niea jai 
     const navigate = useNavigate();
     const handleClick = () => {

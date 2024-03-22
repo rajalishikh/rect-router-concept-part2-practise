@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import AboutAbout from './assets/Component/About/AboutAbout';
 import Contract from './assets/Component/Contract/Contract';
+import ErroreElement from './assets/Component/Errorelement/ErroreElement';
 import Header from './assets/Component/Header/Header';
 import Home from './assets/Component/Home/Home';
 import Post from './assets/Component/Post/Post';
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home></Home>,
+    errorElement:<ErroreElement></ErroreElement> ,
     children: [
       {
         path: "/header",

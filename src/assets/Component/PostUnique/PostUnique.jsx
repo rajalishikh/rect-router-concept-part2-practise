@@ -1,7 +1,9 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 
 const PostUnique = () => {
+    const { PostID } = useParams();
+    console.log(PostID)
     const postU = useLoaderData();
     const navigate2 = useNavigate();
     // here we can go back from the website another page 
