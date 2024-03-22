@@ -1,8 +1,11 @@
-.tag {
+.tag a {
   margin-right: 10px;
   padding: 10px;
   background-color: chocolate;
 }
-.tag:hover {
+.tag a:hover {
   background-color: aqua;
+}
+nav a.active {
+  background-color: rgb(233, 5, 5);
 }
