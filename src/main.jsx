@@ -8,6 +8,7 @@ import AboutAbout from './assets/Component/About/AboutAbout';
 import Contract from './assets/Component/Contract/Contract';
 import ErroreElement from './assets/Component/Errorelement/ErroreElement';
 import Food from './assets/Component/Food/Food';
+import FoodU from './assets/Component/FoodU/FoodU';
 import Header from './assets/Component/Header/Header';
 import Home from './assets/Component/Home/Home';
 import Post from './assets/Component/Post/Post';
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
         path: '/Food',
         loader:()=>fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=a') ,
         element:<Food></Food>
+      },
+      {
+        path: '/Food/:FoodID',
+        loader:({params})=> fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.FoodID}`),
+        element:<FoodU></FoodU>
       }
 
 
