@@ -7,6 +7,7 @@ import {
 import AboutAbout from './assets/Component/About/AboutAbout';
 import Contract from './assets/Component/Contract/Contract';
 import ErroreElement from './assets/Component/Errorelement/ErroreElement';
+import Food from './assets/Component/Food/Food';
 import Header from './assets/Component/Header/Header';
 import Home from './assets/Component/Home/Home';
 import Post from './assets/Component/Post/Post';
@@ -56,8 +57,12 @@ const router = createBrowserRouter([
         loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.PostID}`),
         element:<PostUnique></PostUnique>
         
+      },
+      {
+        path: '/Food',
+        loader:()=>fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=a') ,
+        element:<Food></Food>
       }
-      
 
 
     ],
